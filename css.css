@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial;
+    font-family: 'Comic Sans MS';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*se non trova il primo carattere si passa al secondo e così via*/
+}
+
+h1 {
+    text-decoration: line-through; /*mette una linea sul testo es: sconto*/
+    text-decoration: overline; /*mette una linea al di sopra del testo non da usare poiché è usata per i link e un utente potrebbe confondersi*/
+    text-decoration: underline overline; /*le due cose di sopra messe insieme**/
+    text-decoration: underline;
+    font-family: 'Fredoka One', 'Montserrat', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-weight: normal; /* Titolo non più in grassetto*/
+    font-family: 'Fredoka One', 'Montserrat', sans-serif;
+    clear: both;
+    padding-top: 10px;
+}
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+a:active{ /*quando il link viene cliccato per la prima volta*/
+    color: green;
+}
+
+a:visited { /*appare dopo che il link è stato visitato*/
+    color: violet;
+}
+
+a:focus {/*quando un elemento è selezionato*/
+
+}
+
+h1, h2 {
+    color: palevioletred;
+}
+
+div#navbar {
+    background-color: #6D435A;
+    margin: 0px;
+    width: 100%;
+    padding: 2px 20px;
+    color: #B1EDE8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 3px 10px 2px black;
+}
+
+div#contenitore-supremo {
+    /*background-color: #6D435A;*/
+    max-width: 800px;
+    margin: 120px auto 0px;
+}
+
+div#testata, div#contenuto, div#piedipagina {
+    padding: 25px;
+}
+
+/*div#testata {
+    background-color: #B1EDE8;
+    width: 400px; /*se si ingrandisce o diminuisce la pagina la larghezza dell'elemento rimane invariata*/ 
+    /*width: 50%;
+    min-width: 350px; /*minima larghezza*/
+    /*max-width: 500px; /*massima larghezza*/
+/*}*/
+
+div#testata {
+    background-color: #B1EDE8; /*valori in senso orario*/
+    background-image: linear-gradient(to right,blue, red, green, pink);
+    background-image: url("https://siviaggia.it/wp-content/uploads/sites/2/2022/01/cielo-stellato-in-provenza.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px 0px 20px;/*primo valore definisce il margine alto e basso, mentre il secondo valore definisce il margine di destra e sinistra*/ /*primo alto,secondo di destra, terzo margine inferiore, quarto di sinistra*/
+    border: 2px solid #e05aa4;/*primo valore spessore in px del bordo, stile: solido, color: x */
+    border-radius: 20px;/*primo in alto a sinistra, secondo in alto a destra, terzo in basso a destra, quarto in basso a sinistra*/
+    color: white; /*4 47 15*/
+    box-shadow: 0px 3px 10px 3px black; /*primo valore discostamento orizzontale (-0px verso sinistra, +0px verso destra), secondo valore discostamento 
+    verticale(positivo verso il basso, negativo verso l'alto), terzo valore quanta sfumatura, 
+    quarto valore quanto aumentare le dimensioni dell'ombra, inset per inserire un ombra interna*/
+    /*0px 5px 10px 3px black inset (da inserire se vuoi un altra ombra)*/
+}
+
+div#testata:hover {
+    box-shadow: 0px 0px 0px 0px black;
+    background-image: linear-gradient(to top right, #6D435A, #BCF1EB);
+}
+
+p.dentro-testata {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+img.immagine-natura {
+    width: 40%;
+    min-width: 250px;
+    float: left;
+    margin: 0px 20px 20px 0px;
+}
+
+div#piedipagina {
+    color: #FFFCF9;
+    background-color: #352D39;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    border: 2px solid #B1EDE8;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 3px black;
+}
+
+p.dentro-piedipagina {
+    font-style: italic;
+}
+
+ul.spesa li:first-child {
+    font-weight: bold;
+}
+
+ul.spesa li:last-child {
+    font-weight: bold;
+}
+
+ul.spesa li:nth-child(5) {/*puoi mettere (even) per selezionare i pari, (odd) per i dispari*/
+    font-weight: bold;
+}
+
+/* ADATTAMENTI PER SCHERMI SMARTPHONE */
+
+@media screen and (max-width: 600px) {
+    div#navbar {
+        display: none;
+    }
+
+    div#contenitore-supremo {
+        margin: 0px auto 0px;
+    }
+
+    img.immagine-natura {
+        width: 100%;
+        float: none;
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    div#testata, div#piedipagina {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
